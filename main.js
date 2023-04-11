@@ -8,21 +8,21 @@ let linhas = '';
 form.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    adicionaLinha();
-    atualizarTabela();
+    adicionarContato();
+    atualizar();
 });
 
 
-function adicionaLinha() {
+function adicionarContato() {
     const nome = document.getElementById('contato');
     const numero = document.getElementById('telefone');
     const emails = document.getElementById('e-mail');
 
     if(telefones.includes(numero.value)){
-        alert(`O Número ${numero.value} Já foi cadastrado`)
+        alert(`O número ${numero.value} Já foi cadastrado!`)
     }
     else if(email.includes(emails.value)) {
-        alert(`O E-mail ${emails.value} Já foi cadastrado`)
+        alert(`O e-mail ${emails.value} Já foi cadastrado!`)
     }
     else{
     contatos.push(nome.value);
@@ -42,7 +42,7 @@ function adicionaLinha() {
     emails.value = '';
 }
 
-function atualizarTabela() {
+function atualizar() {
     const corpoTabela = document.querySelector('tbody');
     corpoTabela.innerHTML = linhas;
 }
