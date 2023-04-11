@@ -18,23 +18,23 @@ function adicionarContato() {
     const numero = document.getElementById('telefone');
     const emails = document.getElementById('e-mail');
 
-    if(telefones.includes(numero.value)){
+    if (telefones.includes(numero.value)) {
         alert(`O número ${numero.value} Já foi cadastrado!`)
     }
-    else if(email.includes(emails.value)) {
+    else if (email.includes(emails.value)) {
         alert(`O e-mail ${emails.value} Já foi cadastrado!`)
     }
-    else{
-    contatos.push(nome.value);
-    telefones.push(numero.value);
-    email.push(emails.value);
+    else {
+        contatos.push(nome.value);
+        telefones.push(numero.value);
+        email.push(emails.value);
 
-    let linha = '<tr>';
-    linha += `<td> ${nome.value}</td>`;
-    linha += `<td> ${numero.value}</td>`;
-    linha += `<td> ${emails.value}</td>`;
-    linha += `</tr>`;
-    linhas += linha;
+        let linha = '<tr>';
+        linha += `<td> ${nome.value}</td>`;
+        linha += `<td> ${numero.value}</td>`;
+        linha += `<td> ${emails.value}</td>`;
+        linha += `</tr>`;
+        linhas += linha;
     }
 
     nome.value = '';
